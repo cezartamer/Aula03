@@ -74,47 +74,163 @@
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
-texto = "O compotamento será assim: quando e pressionado o atalho 'CTRL + /' a linha sobre o cursor e comentada com '//' e o cursor é deslocado para a próxima na linha, no sentindo de que, podemos seguir pressionando e comentando linhas em sequência."
-texto = texto.replace(",","")
-texto = texto.replace(".","").lower()
+# texto = "O compotamento será assim: quando e pressionado o atalho 'CTRL + /' a linha sobre o cursor e comentada com '//' e o cursor é deslocado para a próxima na linha, no sentindo de que, podemos seguir pressionando e comentando linhas em sequência."
+# texto = texto.replace(",","")
+# texto = texto.replace(".","").lower()
 
-lista = texto.split()
+# lista = texto.split()
 
-contar_palavras ={}
+# contar_palavras ={}
 
-for palavra in lista:
-        if palavra in contar_palavras:
-            contar_palavras[palavra] += 1
-        else:
-            contar_palavras[palavra] = 1
-print(contar_palavras)
+# for palavra in lista:
+#         if palavra in contar_palavras:
+#             contar_palavras[palavra] += 1
+#         else:
+#             contar_palavras[palavra] = 1
+# print(contar_palavras)
 
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+# numeros = [10, 20, 30, 40, 50]
+# minimo = min(numeros)
+# maximo = max(numeros)
+# normalizados = [(x - minimo) / (maximo - minimo) for x in numeros]
+
+# print(normalizados)
+
+
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
+
+# usuarios = [
+#     {"nome": "Alice", "email": "alice@example.com"},
+#     {"nome": "Bob", "email": ""},
+#     {"nome": "Carol", "email": "carol@example.com"}
+# ]
+
+# Usuarios_validos = []
+
+# for usuario in usuarios:
+#     if usuario["email"] !="":
+#         Usuarios_validos = usuario["email"]
+
+# print(Usuarios_validos)
+
+# usuarios = [
+#     {"nome": "Alice", "email": "alice@example.com"},
+#     {"nome": "Bob", "email": ""},
+#     {"nome": "Carol", "email": "carol@example.com"}
+# ]
+
+# usuarios_validos = [usuario for usuario in usuarios if usuario["email"]]
+
+# print(usuarios_validos)
+
 
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
+# lista = list()
+# lista = [1,2,3,4,5,6,7,8,9]
+
+# for k,l in enumerate(lista):
+#     if l%2 != 0:
+#         del lista[k]
+#     #else:
+#     #    print(f"O valor {l} é impar")
+# print(lista)
+
+
+
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+# vendas = [{"Categoria":"Sapato", "Valor":200},
+#          {"Categoria":"Camaemesa", "Valor":100} ,
+#          {"Categoria":"Sapato", "Valor":210},
+#          {"Categoria":"Camaemesa", "Valor":140},
+#          {"Categoria":"Roupa", "Valor":58}
+# ]
+
+# total_por_categoria = {}
+# for i in vendas:
+#     categoria = i["Categoria"]
+#     valor = i["Valor"]
+
+#     if categoria in total_por_categoria:
+#         total_por_categoria[categoria] +=valor
+#     else:
+#         total_por_categoria[categoria] =valor
+    
+# print(total_por_categoria)
+
+
 
 ### Exercícios com WHILE
 
 ### Exercício 11. Leitura de Dados até Flag
 # Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
 
+# while True:
+#     palavra = input("Digite uma palavra, caso queira sair, digite:'sair': ").lower() 
+#     if palavra == "sair":
+#         break
+#     else:
+#         print(palavra)
+
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+
+# while True:
+#     num = input("Digite um número entre 5 e 13: ")
+#     if num.isnumeric():
+#         if int(num) in range(5,14):
+#             print(num)
+#             break
+#         else:
+#             print("Por favor, digite um numero dentro do intervalo")
+#     else:
+#         print("Por favor, não corresponte a um número")
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
 
+# pagina = 1
+# total_paginas = 10
+
+# while pagina <= total_paginas:
+#     print(f"Processando pagina {pagina} de {total_paginas}")
+#     pagina +=1
+
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
+# max_tentativa = 10
+# tentativa = 1
+
+# while tentativa <=max_tentativa:
+#     print(f"Processando tentativa {tentativa} de {max_tentativa}")
+#     # if True:
+#     #     print("Conexão realizada com sucesso.")
+#     #     break
+#     # else:
+#     #     print("Conexão não obteve sucesso.")
+#     tentativa +=1
+
+
+
+
+
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+lista = list()
+lista = [1,2,3,4,5,6,7,8,9]
+valor = 6
+i = 0
+
+while lista[i] !=valor:
+    i +=1
+print(lista[i])
